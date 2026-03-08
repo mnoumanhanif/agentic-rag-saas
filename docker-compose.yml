@@ -1,0 +1,35 @@
+# docker-compose.yml — One-command deployment for the Agentic RAG System
+#
+# Usage:
+#   1. Copy .env.example to .env and add your API key
+#   2. Run:  docker compose up --build
+#   3. Open:
+#        Next.js UI → http://localhost:3000
+#        API        → http://localhost:8000  (Swagger docs at /docs)
+#        Streamlit  → http://localhost:8501  (legacy UI)
+#
+# To stop:  docker compose down
+
+services:
+  rag-system:
+    build: .
+    ports:
+      - "3000:3000"   # Next.js frontend
+      - "8000:8000"   # FastAPI backend
+      - "8501:8501"   # Streamlit UI (legacy)
+    env_file:
+      - .env
+    volumes:
+      - rag-data:/app/faiss_index    # persist vector store between restarts
+    # Note: running "docker compose down -v" deletes the volume and all indexed documents.
+    # Use "docker compose down" (without -v) to keep your data.
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
+
+volumes:
+  rag-data:

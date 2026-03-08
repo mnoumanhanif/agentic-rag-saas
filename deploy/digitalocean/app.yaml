@@ -1,0 +1,49 @@
+# DigitalOcean App Platform specification — Agentic RAG System
+#
+# Usage:
+#   1. Install doctl CLI → https://docs.digitalocean.com/reference/doctl/how-to/install/
+#   2. Authenticate      → doctl auth init
+#   3. Deploy:
+#        doctl apps create --spec deploy/digitalocean/app.yaml
+#   4. Set env vars in the DigitalOcean dashboard:
+#        GOOGLE_API_KEY (or OPENAI_API_KEY)
+#
+# The app exposes the Streamlit UI (port 8501) as the public endpoint.
+# The FastAPI backend runs on port 8000 inside the container (used internally).
+#
+# NOTE: professional-s (1 GB RAM) is the minimum recommended size.
+#       The app runs three services (FastAPI, Next.js, Streamlit) plus loads
+#       a sentence-transformer embedding model (~90 MB).  512 MB
+#       (professional-xs) is not enough and will cause OOM restarts
+#       (exit code 128).
+
+name: rag-chatbot
+region: nyc
+
+services:
+  - name: rag-system
+    dockerfile_path: Dockerfile
+    source_dir: /
+    github:
+      # IMPORTANT: Change this to your own GitHub username/repo if you forked the project
+      repo: k190462/rag-chatbot
+      branch: main
+      deploy_on_push: true
+    http_port: 8501
+    instance_count: 1
+    instance_size_slug: professional-s
+    envs:
+      - key: GOOGLE_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+    health_check:
+      http_path: /health
+      port: 8000
+      initial_delay_seconds: 120
+      period_seconds: 30
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 5

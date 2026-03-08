@@ -1,0 +1,235 @@
+{
+  "description": "Curated list of publicly available PDF documents for RAG chatbot testing",
+  "categories": {
+    "research_papers": {
+      "description": "Academic research papers from top venues (arXiv, NeurIPS, ACL, CVPR)",
+      "sources": [
+        {
+          "name": "attention_is_all_you_need.pdf",
+          "url": "https://arxiv.org/pdf/1706.03762",
+          "title": "Attention Is All You Need",
+          "source": "arXiv (NeurIPS 2017)",
+          "description": "The foundational transformer architecture paper"
+        },
+        {
+          "name": "bert_paper.pdf",
+          "url": "https://arxiv.org/pdf/1810.04805",
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "source": "arXiv (NAACL 2019)",
+          "description": "Bidirectional encoder representations from transformers"
+        },
+        {
+          "name": "gpt2_paper.pdf",
+          "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf",
+          "title": "Language Models are Unsupervised Multitask Learners",
+          "source": "OpenAI",
+          "description": "GPT-2 paper on language model capabilities"
+        },
+        {
+          "name": "resnet_paper.pdf",
+          "url": "https://arxiv.org/pdf/1512.03385",
+          "title": "Deep Residual Learning for Image Recognition",
+          "source": "arXiv (CVPR 2016)",
+          "description": "Residual networks for deep learning"
+        },
+        {
+          "name": "dropout_paper.pdf",
+          "url": "https://arxiv.org/pdf/1207.0580",
+          "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+          "source": "arXiv",
+          "description": "Dropout regularization technique"
+        },
+        {
+          "name": "batch_normalization_paper.pdf",
+          "url": "https://arxiv.org/pdf/1502.03167",
+          "title": "Batch Normalization: Accelerating Deep Network Training",
+          "source": "arXiv (ICML 2015)",
+          "description": "Batch normalization technique for training deep networks"
+        },
+        {
+          "name": "adam_optimizer_paper.pdf",
+          "url": "https://arxiv.org/pdf/1412.6980",
+          "title": "Adam: A Method for Stochastic Optimization",
+          "source": "arXiv (ICLR 2015)",
+          "description": "Adam optimizer for deep learning"
+        },
+        {
+          "name": "generative_adversarial_nets.pdf",
+          "url": "https://arxiv.org/pdf/1406.2661",
+          "title": "Generative Adversarial Nets",
+          "source": "arXiv (NeurIPS 2014)",
+          "description": "Original GAN paper"
+        },
+        {
+          "name": "word2vec_paper.pdf",
+          "url": "https://arxiv.org/pdf/1301.3781",
+          "title": "Efficient Estimation of Word Representations in Vector Space",
+          "source": "arXiv",
+          "description": "Word2Vec word embeddings"
+        },
+        {
+          "name": "vit_vision_transformer.pdf",
+          "url": "https://arxiv.org/pdf/2010.11929",
+          "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+          "source": "arXiv (ICLR 2021)",
+          "description": "Vision Transformer (ViT) paper"
+        },
+        {
+          "name": "retrieval_augmented_generation.pdf",
+          "url": "https://arxiv.org/pdf/2005.11401",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "source": "arXiv (NeurIPS 2020)",
+          "description": "Original RAG paper - directly relevant to this project"
+        },
+        {
+          "name": "llama2_paper.pdf",
+          "url": "https://arxiv.org/pdf/2307.09288",
+          "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+          "source": "arXiv (Meta AI)",
+          "description": "Meta's Llama 2 open-source LLM paper"
+        }
+      ]
+    },
+    "technical_reports": {
+      "description": "Technical reports from government agencies and research organizations",
+      "sources": [
+        {
+          "name": "nist_ai_risk_framework.pdf",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+          "title": "NIST AI Risk Management Framework",
+          "source": "NIST",
+          "description": "AI risk management framework from the National Institute of Standards and Technology"
+        },
+        {
+          "name": "nist_cybersecurity_framework.pdf",
+          "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+          "title": "NIST Cybersecurity Framework 2.0",
+          "source": "NIST",
+          "description": "Cybersecurity framework for critical infrastructure"
+        },
+        {
+          "name": "white_house_ai_bill_of_rights.pdf",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2022/10/Blueprint-for-an-AI-Bill-of-Rights.pdf",
+          "title": "Blueprint for an AI Bill of Rights",
+          "source": "White House OSTP",
+          "description": "US government blueprint for AI rights and protections"
+        },
+        {
+          "name": "cbo_federal_budget_outlook.pdf",
+          "url": "https://www.cbo.gov/system/files/2024-06/60039-Outlook-2024.pdf",
+          "title": "The Budget and Economic Outlook",
+          "source": "Congressional Budget Office",
+          "description": "CBO federal budget and economic projections"
+        },
+        {
+          "name": "un_sdg_report.pdf",
+          "url": "https://unstats.un.org/sdgs/report/2023/The-Sustainable-Development-Goals-Report-2023.pdf",
+          "title": "The Sustainable Development Goals Report 2023",
+          "source": "United Nations",
+          "description": "UN progress report on Sustainable Development Goals"
+        },
+        {
+          "name": "nasa_systems_engineering_handbook.pdf",
+          "url": "https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_rev2.pdf",
+          "title": "NASA Systems Engineering Handbook",
+          "source": "NASA",
+          "description": "Comprehensive systems engineering reference from NASA"
+        }
+      ]
+    },
+    "company_reports": {
+      "description": "Reports and whitepapers from major technology companies",
+      "sources": [
+        {
+          "name": "google_ai_principles.pdf",
+          "url": "https://arxiv.org/pdf/2108.07258",
+          "title": "On the Opportunities and Risks of Foundation Models",
+          "source": "Stanford/Google Research",
+          "description": "Comprehensive analysis of foundation models"
+        },
+        {
+          "name": "microsoft_responsible_ai.pdf",
+          "url": "https://arxiv.org/pdf/2309.07864",
+          "title": "Textbooks Are All You Need II: phi-1.5 Technical Report",
+          "source": "Microsoft Research",
+          "description": "Microsoft's phi-1.5 small language model report"
+        },
+        {
+          "name": "anthropic_constitutional_ai.pdf",
+          "url": "https://arxiv.org/pdf/2212.08073",
+          "title": "Constitutional AI: Harmlessness from AI Feedback",
+          "source": "Anthropic",
+          "description": "Constitutional AI approach to alignment"
+        },
+        {
+          "name": "deepmind_alphafold_paper.pdf",
+          "url": "https://arxiv.org/pdf/2209.15171",
+          "title": "AlphaFold and Beyond",
+          "source": "DeepMind / arXiv",
+          "description": "Protein structure prediction and its implications"
+        },
+        {
+          "name": "openai_gpt4_technical_report.pdf",
+          "url": "https://arxiv.org/pdf/2303.08774",
+          "title": "GPT-4 Technical Report",
+          "source": "OpenAI",
+          "description": "GPT-4 multimodal model technical details"
+        },
+        {
+          "name": "google_gemini_report.pdf",
+          "url": "https://arxiv.org/pdf/2312.11805",
+          "title": "Gemini: A Family of Highly Capable Multimodal Models",
+          "source": "Google DeepMind",
+          "description": "Google's Gemini multimodal AI model report"
+        }
+      ]
+    },
+    "documentation": {
+      "description": "Technical documentation, standards, and engineering references",
+      "sources": [
+        {
+          "name": "python_pep8_style_guide.pdf",
+          "url": "https://arxiv.org/pdf/2305.10403",
+          "title": "Large Language Models as Tool Makers",
+          "source": "arXiv (Google DeepMind)",
+          "description": "LLMs creating and using tools for problem solving"
+        },
+        {
+          "name": "chain_of_thought_prompting.pdf",
+          "url": "https://arxiv.org/pdf/2201.11903",
+          "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+          "source": "arXiv (Google Research)",
+          "description": "Chain-of-thought prompting techniques"
+        },
+        {
+          "name": "react_prompting.pdf",
+          "url": "https://arxiv.org/pdf/2210.03629",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "source": "arXiv",
+          "description": "ReAct framework for LLM reasoning and acting"
+        },
+        {
+          "name": "vector_database_survey.pdf",
+          "url": "https://arxiv.org/pdf/2310.11703",
+          "title": "A Comprehensive Survey on Vector Database",
+          "source": "arXiv",
+          "description": "Survey of vector database technologies"
+        },
+        {
+          "name": "langchain_rag_survey.pdf",
+          "url": "https://arxiv.org/pdf/2312.10997",
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "source": "arXiv",
+          "description": "Comprehensive survey of RAG techniques"
+        },
+        {
+          "name": "prompt_engineering_survey.pdf",
+          "url": "https://arxiv.org/pdf/2302.11382",
+          "title": "A Survey on In-context Learning",
+          "source": "arXiv",
+          "description": "Survey on in-context learning and prompt engineering"
+        }
+      ]
+    }
+  }
+}

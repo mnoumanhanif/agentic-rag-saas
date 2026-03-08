@@ -1,0 +1,31 @@
+# =============================================================================
+# Dockerfile.backend — Production FastAPI backend with Gunicorn
+# =============================================================================
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install CPU-only PyTorch first (avoids pulling ~2 GB of CUDA/NVIDIA libs)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
+
+# Copy application code
+COPY rag_system ./rag_system
+COPY main.py gunicorn.conf.py ./
+
+# Pre-download the sentence-transformers model to avoid runtime OOM
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
+EXPOSE 8000
+
+# Run with Gunicorn for production (multi-worker, pre-fork)
+CMD ["gunicorn", "-c", "gunicorn.conf.py", "rag_system.api.server:get_app()"]
